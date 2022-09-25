@@ -954,6 +954,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5642651770910884675, guid: 4b69dc662c3434f5592c3e3bf0b01f45,
         type: 3}
+      propertyPath: main
+      value: 
+      objectReference: {fileID: 942020486}
+    - target: {fileID: 5642651770910884675, guid: 4b69dc662c3434f5592c3e3bf0b01f45,
+        type: 3}
       propertyPath: nextBtn
       value: 
       objectReference: {fileID: 1465529099}

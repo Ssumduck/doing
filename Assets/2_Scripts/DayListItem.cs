@@ -9,4 +9,8 @@ public class DayListItem : MonoBehaviour
     {
         dayTxt.text = day.ToString();
     }
+
+    public void OnTouch()
+    {
+    }
 }
