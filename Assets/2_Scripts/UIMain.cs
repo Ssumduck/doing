@@ -6,7 +6,10 @@ using UnityEngine.UI;
 
 public class UIMain : MonoBehaviour
 {
-    public Main main;
+    #region Singleton
+    static UIMain instance;
+    public static UIMain Instance { get { if (instance == null) instance = GameObject.FindObjectOfType<UIMain>(); return instance; } }
+    #endregion
 
     public CustomButton btnList;
     public CustomButton btnToday;
@@ -41,7 +44,7 @@ public class UIMain : MonoBehaviour
 
     void OnClickList(CustomButton btn)
     {
-        main.OpenListUI(true);
+        Main.Instance.OpenListUI(true);
     }
 
     void OnClickToday(CustomButton btn)
@@ -56,7 +59,7 @@ public class UIMain : MonoBehaviour
 
     void OnClickPlus(CustomButton btn)
     {
-        main.OpenEditUI(true);
+        Main.Instance.OpenEditUI(true);
     }
 
     void OnClickMore(CustomButton btn)
