@@ -1154,6 +1154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   closeBtn: {fileID: 659996285}
   dateTxt: {fileID: 1285072342}
+  memoField: {fileID: 1051141365}
 --- !u!1001 &1465529091
 PrefabInstance:
   m_ObjectHideFlags: 0
