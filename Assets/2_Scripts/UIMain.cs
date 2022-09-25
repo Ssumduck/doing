@@ -36,7 +36,7 @@ public class UIMain : MonoBehaviour
 
     public void Refresh()
     {
-        txtDate.text = string.Format("{0}/{1} {2}", selectDate, selectDate.Day, selectDate.DayOfWeek);
+        txtDate.text = string.Format("{0}/{1} {2}", selectDate.Month, selectDate.Day, selectDate.DayOfWeek);
     }
 
     void OnClickList(CustomButton btn)
