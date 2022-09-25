@@ -15,6 +15,15 @@ public class UIMain : MonoBehaviour
     public Text txtDate;
     public Transform tfToDoList;
 
+    private void Awake()
+    {
+        btnList.AddOnPointClick(OnClickList);
+        btnToday.AddOnPointClick(OnClickToday);
+        btnPlus.AddOnPointClick(OnClickPlus);
+        btnMore.AddOnPointClick(OnClickMore);
+
+        btnEdit.AddOnPointClick(OnClickEdit);
+    }
 
     void OnClickList(CustomButton btn)
     {
@@ -22,6 +31,21 @@ public class UIMain : MonoBehaviour
     }
 
     void OnClickToday(CustomButton btn)
+    {
+
+    }
+
+    void OnClickPlus(CustomButton btn)
+    {
+
+    }
+
+    void OnClickMore(CustomButton btn)
+    {
+
+    }
+
+    void OnClickEdit(CustomButton btn)
     {
 
     }
