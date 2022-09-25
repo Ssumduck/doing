@@ -1510,13 +1510,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed6b05e7f139340a2bcf1998d50bfe25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnList: {fileID: 0}
-  btnToday: {fileID: 0}
-  btnPlus: {fileID: 0}
-  btnMore: {fileID: 0}
-  btnEdit: {fileID: 0}
-  txtDate: {fileID: 0}
-  tfToDoList: {fileID: 0}
+  main: {fileID: 0}
+  btnList: {fileID: 417591854}
+  btnToday: {fileID: 417591853}
+  btnPlus: {fileID: 417591852}
+  btnMore: {fileID: 417591851}
+  btnEdit: {fileID: 417591848}
+  txtDate: {fileID: 6699660280627692060}
+  tfToDoList: {fileID: 4217084412177720976}
 --- !u!1 &8967408841117098169
 GameObject:
   m_ObjectHideFlags: 0

@@ -128,10 +128,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 942020485}
     m_Modifications:
+    - target: {fileID: 1827745781032949529, guid: 827f8038672604e83865896d6b23ec8c,
+        type: 3}
+      propertyPath: main
+      value: 
+      objectReference: {fileID: 942020486}
     - target: {fileID: 4217084412177720976, guid: 827f8038672604e83865896d6b23ec8c,
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7557725204112160589, guid: 827f8038672604e83865896d6b23ec8c,
+        type: 3}
+      propertyPath: m_Text
+      value: TODAY
       objectReference: {fileID: 0}
     - target: {fileID: 7783442251586333397, guid: 827f8038672604e83865896d6b23ec8c,
         type: 3}
@@ -251,6 +261,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 417591837}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &417591839 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1827745781032949529, guid: 827f8038672604e83865896d6b23ec8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 417591837}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed6b05e7f139340a2bcf1998d50bfe25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,6 +715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 942020485}
+  - component: {fileID: 942020486}
   - component: {fileID: 942020484}
   - component: {fileID: 942020483}
   - component: {fileID: 942020482}
@@ -785,6 +808,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &942020486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942020481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a21c399d3174143b8034ab418ee29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiMain: {fileID: 417591839}
+  uiList: {fileID: 0}
+  uiEdit: {fileID: 0}
 --- !u!1001 &1465529091
 PrefabInstance:
   m_ObjectHideFlags: 0
