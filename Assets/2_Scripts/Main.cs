@@ -15,6 +15,7 @@ public class Main : MonoBehaviour
     public void OpenListUI(bool isOpen)
     {
         uiList.gameObject.SetActive(isOpen);
+        uiList.MemoActive(false);
     }
 
     public void OpenEditUI(bool isOpen)
