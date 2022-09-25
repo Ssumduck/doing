@@ -545,7 +545,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC624\uB298"
+  m_Text: TODAY
 --- !u!1 &2584462674525717938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,7 +1510,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed6b05e7f139340a2bcf1998d50bfe25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main: {fileID: 0}
   btnList: {fileID: 417591854}
   btnToday: {fileID: 417591853}
   btnPlus: {fileID: 417591852}
