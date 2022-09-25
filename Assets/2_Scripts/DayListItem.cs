@@ -10,7 +10,7 @@ public class DayListItem : MonoBehaviour
     [SerializeField] GameObject memoObj;
 
     public bool IsCheck { get { return UserData.dateTime.Equals(new DateTime(year, month, day)); } } // 메모창이 켜져있는지
-    public bool HasMemo { get { return false; } } // 메모가 있는지
+    public bool HasMemo { get { return UserData.Instance.dicMemo.ContainsKey(new DateTime(year, month, day)); } } // 메모가 있는지
 
 
     int year;
