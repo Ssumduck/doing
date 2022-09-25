@@ -24,6 +24,7 @@ public class DayListItem : MonoBehaviour
 
     public void OnTouch(CustomButton _btn)
     {
+        UserData.dateTime = new System.DateTime(year, month, day);
         Main.Instance.uiList.MemoActive(true);
     }
 }

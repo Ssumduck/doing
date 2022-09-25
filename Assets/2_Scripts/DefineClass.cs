@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,6 +33,28 @@ public class DefineClass
                 return "November";
             case 12:
                 return "December";
+        }
+        return string.Empty;
+    }
+
+    public static string GetStringSimpleDay(DayOfWeek dayOfWeek)
+    {
+        switch (dayOfWeek)
+        {
+            case DayOfWeek.Friday:
+                return "Fri";
+            case DayOfWeek.Monday:
+                return "Mon";
+            case DayOfWeek.Saturday:
+                return "Sat";
+            case DayOfWeek.Sunday:
+                return "Sun";
+            case DayOfWeek.Thursday:
+                return "Thu";
+            case DayOfWeek.Tuesday:
+                return "Tue";
+            case DayOfWeek.Wednesday:
+                return "Wed";
         }
         return string.Empty;
     }

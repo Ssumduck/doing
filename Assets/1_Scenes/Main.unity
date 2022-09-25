@@ -903,6 +903,18 @@ MonoBehaviour:
   uiMain: {fileID: 417591839}
   uiList: {fileID: 1465529093}
   uiEdit: {fileID: 588579270}
+--- !u!114 &1285072342 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3432606102412826796, guid: 4b69dc662c3434f5592c3e3bf0b01f45,
+    type: 3}
+  m_PrefabInstance: {fileID: 1465529091}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1417334793 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3674391818750242488, guid: 4b69dc662c3434f5592c3e3bf0b01f45,
@@ -922,6 +934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeBtn: {fileID: 659996285}
+  dateTxt: {fileID: 1285072342}
 --- !u!1001 &1465529091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -933,7 +946,7 @@ PrefabInstance:
         type: 3}
       propertyPath: memoObj
       value: 
-      objectReference: {fileID: 1417334793}
+      objectReference: {fileID: 1417334794}
     - target: {fileID: 657619372885124587, guid: 4b69dc662c3434f5592c3e3bf0b01f45,
         type: 3}
       propertyPath: m_Name

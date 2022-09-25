@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class UIList : MonoBehaviour
 {
-    public GameObject memoObj;
+    public MemoUI memoObj;
+    [HideInInspector] public int year, month, day;
 
     public void MemoActive(bool _isActive)
     {
-        memoObj.SetActive(_isActive);
+        memoObj.gameObject.SetActive(_isActive);
+
+        if(_isActive)
+        {
+            memoObj.Init();
+        }
     }
 }
