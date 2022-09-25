@@ -1360,6 +1360,8 @@ MonoBehaviour:
   containerObj: {fileID: 2763843452645736028}
   listItemPrefab: {fileID: 1047956680498579269, guid: fafe4d4102a3f49ffbd2f34eaf02444d,
     type: 3}
+  yearTxt: {fileID: 2763843453927551453}
+  monthTxt: {fileID: 2763843453542657815}
 --- !u!1 &2763843454320625154
 GameObject:
   m_ObjectHideFlags: 0

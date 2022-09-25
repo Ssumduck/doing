@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2804818562794003179}
   - component: {fileID: 1776484547003538614}
   - component: {fileID: 5048205077945621677}
+  - component: {fileID: 4407346090745232425}
   m_Layer: 5
   m_Name: DayListItem
   m_TagString: Untagged
@@ -77,6 +78,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4407346090745232425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047956680498579269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b115cf8f04f6a98408c080ec02f35ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2779246440301652780
 GameObject:
   m_ObjectHideFlags: 0
