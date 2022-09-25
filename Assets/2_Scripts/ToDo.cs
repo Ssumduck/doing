@@ -12,5 +12,13 @@ public class ToDo
     public RepeatType repeatType;
 
     // RepeatType == custom 일때
-    public List<DayOfWeek> repeatDays = new List<DayOfWeek>();
+    public List<DayOfWeek> repeatDays;
+
+    public ToDo()
+    {
+        date = DateTime.Today;
+        todo = "";
+        repeatType = RepeatType.none;
+        repeatDays = new List<DayOfWeek>();
+    }
 }
