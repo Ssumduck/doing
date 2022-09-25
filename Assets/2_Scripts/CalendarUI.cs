@@ -48,7 +48,7 @@ public class CalendarUI : MonoBehaviour
         DayOfWeek startDay = cal.GetDayOfWeek(new DateTime(_time.Year, _time.Month, 1));
 
         yearTxt.text = _time.Year.ToString();
-        monthTxt.text = $"{_time.Month.ToString()}월";
+        monthTxt.text = $"{DefineClass.GetStringMonth(month)}";
 
         int i = 0;
 
