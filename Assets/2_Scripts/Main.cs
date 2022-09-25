@@ -8,6 +8,7 @@ public class Main : MonoBehaviour
     static Main instance;
     public static Main Instance { get { if (instance == null) instance = GameObject.FindObjectOfType<Main>(); return instance; } }
     #endregion
+    public TextAsset memoLoad;
     public UIMain uiMain;
     public UIList uiList;
     public UIEdit uiEdit;

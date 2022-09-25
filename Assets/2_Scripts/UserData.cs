@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class UserData
@@ -17,22 +18,46 @@ public class UserData
         }
     }
 
+    //UserData()
+    //{
+    //    // 초기화
+    //    if (PlayerPrefs.HasKey(JsonKey.MemoKey))
+    //    {
+    //        string json = PlayerPrefs.GetString(JsonKey.MemoKey);
+
+    //        json = Main.Instance.memoLoad.text;
+
+    //        dicMemo = JsonConvert.DeserializeObject<Dictionary<DateTime, string>>(json);
+    //    }
+    //}
+
     UserData()
     {
         // 초기화
-        if (PlayerPrefs.HasKey(JsonKey.MemoKey))
+        if (DefineClass.ReadStringFromFile(SaveType.Memo) != null)
         {
-            string json = PlayerPrefs.GetString(JsonKey.MemoKey);
-
+            string json = DefineClass.ReadStringFromFile(SaveType.Memo);
+            Debug.Log($"jsonLoad : {json}");
             dicMemo = JsonConvert.DeserializeObject<Dictionary<DateTime, string>>(json);
+        }else
+        {
+#if UNITY_EDITOR
+            Debug.LogError("dicMemo is null !!");
+#endif
         }
     }
 
     public void MemoSave()
     {
         string json = JsonConvert.SerializeObject(dicMemo);
-        PlayerPrefs.SetString(JsonKey.MemoKey, json);
+        DefineClass.WriteStringToFile(json, SaveType.Memo);
     }
+
+    //public void MemoSave()
+    //{
+    //    string json = JsonConvert.SerializeObject(dicMemo);
+    //    PlayerPrefs.SetString(JsonKey.MemoKey, json);
+    //}
 
     public Dictionary<DateTime, List<ToDo>> dicToDo = new Dictionary<DateTime, List<ToDo>>();
     public Dictionary<DateTime, string> dicMemo = new Dictionary<DateTime, string>();
