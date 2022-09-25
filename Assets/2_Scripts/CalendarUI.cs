@@ -85,7 +85,7 @@ public class CalendarUI : MonoBehaviour
 
             Objs[j].gameObject.SetActive(true);
             Objs[j].GetComponent<RectTransform>().anchoredPosition = new Vector2(xPos, yPos);
-            Objs[j].Init(j + 1);
+            Objs[j].Init(_time.Year, _time.Month, j + 1);
 
             if (i >= 6)
             {
