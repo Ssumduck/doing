@@ -21,8 +21,8 @@ public class UserData
         // 초기화
     }
 
-    public Dictionary<DateTime, List<ToDo>> dicToDo;
-    public Dictionary<DateTime, string> dicMemo;
+    public Dictionary<DateTime, List<ToDo>> dicToDo = new Dictionary<DateTime, List<ToDo>>();
+    public Dictionary<DateTime, string> dicMemo = new Dictionary<DateTime, string>();
 
     public static DateTime dateTime = new DateTime();
 }

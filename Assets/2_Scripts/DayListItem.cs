@@ -9,13 +9,10 @@ public class DayListItem : MonoBehaviour
     [SerializeField] GameObject checkObj;
     [SerializeField] GameObject memoObj;
 
-    public bool IsCheck { get { return UserData.dateTime.Equals(new DateTime(year, month, day)); } } // 메모창이 켜져있는지
-    public bool HasMemo { get { return UserData.Instance.dicMemo.ContainsKey(new DateTime(year, month, day)); } } // 메모가 있는지
+    DateTime dateTime;
 
-
-    int year;
-    int month;
-    int day;
+    public bool IsCheck { get { return UserData.dateTime.Equals(dateTime); } } // 메모창이 켜져있는지
+    public bool HasMemo { get { return UserData.Instance.dicMemo.ContainsKey(dateTime); } } // 메모가 있는지
 
     private void Start()
     {
@@ -25,9 +22,7 @@ public class DayListItem : MonoBehaviour
     public void Init(int year, int month, int day)
     {
         dayTxt.text = day.ToString();
-        this.year = year;
-        this.month = month;
-        this.day = day;
+        dateTime = new DateTime(year, month, day);
         Refresh();
     }
 
@@ -39,7 +34,7 @@ public class DayListItem : MonoBehaviour
 
     public void OnTouch(CustomButton _btn)
     {
-        UserData.dateTime = new System.DateTime(year, month, day);
+        UserData.dateTime = dateTime;
         Main.Instance.uiList.MemoActive(true);
         checkObj.SetActive(IsCheck);
         memoObj.SetActive(HasMemo);
