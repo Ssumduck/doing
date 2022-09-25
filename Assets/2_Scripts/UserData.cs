@@ -59,6 +59,15 @@ public class UserData
     //    PlayerPrefs.SetString(JsonKey.MemoKey, json);
     //}
 
+    public void AddToDo(ToDo toDoData)
+    {
+        if (dicToDo.ContainsKey(toDoData.date) == false)
+            dicToDo.Add(toDoData.date, new List<ToDo>());
+
+        dicToDo[toDoData.date].Add(toDoData);
+    }
+
+
     public Dictionary<DateTime, List<ToDo>> dicToDo = new Dictionary<DateTime, List<ToDo>>();
     public Dictionary<DateTime, string> dicMemo = new Dictionary<DateTime, string>();
 

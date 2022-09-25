@@ -21,7 +21,7 @@ public class UIMain : MonoBehaviour
     public Text txtDate;
     public Transform tfToDoList;
 
-    private DateTime selectDate; 
+    public DateTime selectDate { get; set; }
     
     private void Awake()
     {
