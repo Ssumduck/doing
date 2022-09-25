@@ -20,7 +20,7 @@ public class CalendarUI : MonoBehaviour
     float xStartPos = 60f;
     float yStartPos = 400f;
     float xPadding = 125f;
-    float yPadding = 115f;
+    float yPadding = 120f;
 
     void Start()
     {
