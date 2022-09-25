@@ -151,8 +151,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 215, y: 0}
-  m_SizeDelta: {x: 268.19342, y: 117.00484}
+  m_AnchoredPosition: {x: 233.2, y: 0}
+  m_SizeDelta: {x: 230, y: 117.00484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5858869895464447501
 CanvasRenderer:
@@ -225,8 +225,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -264, y: 852.4}
-  m_SizeDelta: {x: 339.0636, y: 84.29387}
+  m_AnchoredPosition: {x: -19.4, y: 840}
+  m_SizeDelta: {x: 834.9498, y: 84.29387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5065967342605450120
 CanvasRenderer:
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -261,14 +261,14 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 79
+    m_MaxSize: 62
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "9/21 \uC218\uC694\uC77C"
+  m_Text: "9\uC6D4 23\uC77C (\uC218)"
 --- !u!1 &1263711685264531823
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,8 +451,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -4.6}
-  m_SizeDelta: {x: 0, y: -9.127792}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4638191501483972751
 CanvasRenderer:
@@ -487,14 +487,14 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 75
+    m_MaxSize: 54
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TODAY
+  m_Text: "\uC624\uB298"
 --- !u!1 &2584462674525717938
 GameObject:
   m_ObjectHideFlags: 0
