@@ -11,6 +11,8 @@ public class CalendarUI : MonoBehaviour
     [SerializeField] GameObject listItemPrefab;
     [SerializeField] Text yearTxt;
     [SerializeField] Text monthTxt;
+    [SerializeField] CustomButton beforeBtn;
+    [SerializeField] CustomButton nextBtn;
     #endregion
 
     List<DayListItem> Objs = new List<DayListItem>();
@@ -20,22 +22,28 @@ public class CalendarUI : MonoBehaviour
     float xStartPos = 60f;
     float yStartPos = 400f;
     float xPadding = 125f;
-    float yPadding = 120f;
+    float yPadding = 130f;
 
     void Start()
     {
-        Init(DateTime.Now);
+        beforeBtn.AddOnPointClick(DescMonth);
+        nextBtn.AddOnPointClick(IncMonth);
         time = DateTime.Now;
+        Init(time);
     }
 
-    private void Update()
+    public void IncMonth(CustomButton _btn)
     {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            time = time.AddMonths(1);
+        time = time.AddMonths(1);
 
-            Init(time);
-        }
+        Init(time);
+    }
+
+    public void DescMonth(CustomButton _btn)
+    {
+        time = time.AddMonths(-1);
+
+        Init(time);
     }
 
     void Init(DateTime _time)

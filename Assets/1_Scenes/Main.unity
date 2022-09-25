@@ -952,6 +952,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5642651770910884675, guid: 4b69dc662c3434f5592c3e3bf0b01f45,
+        type: 3}
+      propertyPath: nextBtn
+      value: 
+      objectReference: {fileID: 1465529099}
+    - target: {fileID: 5642651770910884675, guid: 4b69dc662c3434f5592c3e3bf0b01f45,
+        type: 3}
+      propertyPath: beforeBtn
+      value: 
+      objectReference: {fileID: 1465529100}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b69dc662c3434f5592c3e3bf0b01f45, type: 3}
 --- !u!224 &1465529092 stripped
@@ -972,6 +982,165 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95ec019c0d76444fbb9a4d95ae89f516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1465529094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2763843452894335878, guid: 4b69dc662c3434f5592c3e3bf0b01f45,
+    type: 3}
+  m_PrefabInstance: {fileID: 1465529091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1465529095 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5642651770910884675, guid: 4b69dc662c3434f5592c3e3bf0b01f45,
+    type: 3}
+  m_PrefabInstance: {fileID: 1465529091}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ccf57e105d6efb4babd2062204e417d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1465529096 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2763843452894335876, guid: 4b69dc662c3434f5592c3e3bf0b01f45,
+    type: 3}
+  m_PrefabInstance: {fileID: 1465529091}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465529094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1465529097 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2763843452760316006, guid: 4b69dc662c3434f5592c3e3bf0b01f45,
+    type: 3}
+  m_PrefabInstance: {fileID: 1465529091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1465529098 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2763843452760316004, guid: 4b69dc662c3434f5592c3e3bf0b01f45,
+    type: 3}
+  m_PrefabInstance: {fileID: 1465529091}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465529097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1465529099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465529094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf0bf1c647cc46e2996d9771abf44f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1465529096}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  soundIdx: 0
+  useTween: 1
+  tweenObject: {fileID: 1465529094}
+  tweenTime: 0.1
+  tweenScaleUp: {x: 1, y: 1, z: 1}
+  tweenScaleDown: {x: 0.95, y: 0.95, z: 0.95}
+  bPossibleScroll: 0
+--- !u!114 &1465529100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465529097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf0bf1c647cc46e2996d9771abf44f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1465529098}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1465529095}
+        m_MethodName: DescMonth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  soundIdx: 0
+  useTween: 1
+  tweenObject: {fileID: 1465529097}
+  tweenTime: 0.1
+  tweenScaleUp: {x: 1, y: 1, z: 1}
+  tweenScaleDown: {x: 0.95, y: 0.95, z: 0.95}
+  bPossibleScroll: 0
 --- !u!1 &1673322936
 GameObject:
   m_ObjectHideFlags: 0
