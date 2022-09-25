@@ -47,7 +47,7 @@ public class CalendarUI : MonoBehaviour
         int days = cal.GetDaysInMonth(year, month);
         DayOfWeek startDay = cal.GetDayOfWeek(new DateTime(_time.Year, _time.Month, 1));
 
-        yearTxt.text = _time.Year.ToString() ;
+        yearTxt.text = _time.Year.ToString();
         monthTxt.text = $"{_time.Month.ToString()}월";
 
         int i = 0;
@@ -55,7 +55,7 @@ public class CalendarUI : MonoBehaviour
         float xPos = xStartPos;
         float yPos = yStartPos;
 
-        while(i != (int)startDay)
+        while (i != (int)startDay)
         {
             xPos += xPadding;
             i++;
@@ -74,8 +74,10 @@ public class CalendarUI : MonoBehaviour
 
                 Objs.Add(obj.GetComponent<DayListItem>());
             }
+
             Objs[j].gameObject.SetActive(true);
             Objs[j].GetComponent<RectTransform>().anchoredPosition = new Vector2(xPos, yPos);
+            Objs[j].Init(j + 1);
 
             if (i >= 6)
             {
