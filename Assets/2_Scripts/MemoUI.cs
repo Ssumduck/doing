@@ -6,10 +6,6 @@ public class MemoUI : MonoBehaviour
     [SerializeField] CustomButton closeBtn;
     [SerializeField] Text dateTxt;
 
-    int Year;
-    int Month;
-    int Day;
-
     private void Awake()
     {
         closeBtn.AddOnPointClick(TouchClose);
@@ -22,6 +18,7 @@ public class MemoUI : MonoBehaviour
 
     void TouchClose(CustomButton _btn)
     {
+        UserData.dateTime = new System.DateTime();
         Main.Instance.uiList.MemoActive(false);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class UIList : MonoBehaviour
 {
     public MemoUI memoObj;
+    [SerializeField] CalendarUI calendarUI;
     [HideInInspector] public int year, month, day;
 
     public void MemoActive(bool _isActive)
@@ -15,5 +16,11 @@ public class UIList : MonoBehaviour
         {
             memoObj.Init();
         }
+        calendarUI.Refresh();
+    }
+
+    public void Refresh()
+    {
+        calendarUI.Refresh();
     }
 }

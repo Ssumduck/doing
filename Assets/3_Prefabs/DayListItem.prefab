@@ -93,6 +93,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dayTxt: {fileID: 2906383774878632583}
   dayBtn: {fileID: 1146272526501431167}
+  checkObj: {fileID: 4512801885521452776}
+  memoObj: {fileID: 4213827713668548207}
 --- !u!114 &1146272526501431167
 MonoBehaviour:
   m_ObjectHideFlags: 0

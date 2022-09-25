@@ -46,6 +46,14 @@ public class CalendarUI : MonoBehaviour
         Init(time);
     }
 
+    public void Refresh()
+    {
+        for (int i = 0; i < Objs.Count; i++)
+        {
+            Objs[i].Refresh();
+        }
+    }
+
     void Init(DateTime _time)
     {
         Calendar cal = new KoreanCalendar();
