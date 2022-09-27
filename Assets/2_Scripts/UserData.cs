@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using System.Linq;
 
 public class UserData
 {
@@ -39,7 +40,8 @@ public class UserData
             string json = DefineClass.ReadStringFromFile(SaveType.Memo);
             Debug.Log($"jsonLoad : {json}");
             dicMemo = JsonConvert.DeserializeObject<Dictionary<DateTime, string>>(json);
-        }else
+        }
+        else
         {
 #if UNITY_EDITOR
             Debug.LogError("dicMemo is null !!");
@@ -47,12 +49,13 @@ public class UserData
         }
 
         // ToDo 리스트 로드
-        if(DefineClass.ReadStringFromFile(SaveType.ToDo) != null)
+        if (DefineClass.ReadStringFromFile(SaveType.ToDo) != null)
         {
             string json = DefineClass.ReadStringFromFile(SaveType.ToDo);
             Debug.Log($"Todo Lst Load : {json}");
-            dicToDo = JsonConvert.DeserializeObject<Dictionary<DateTime, List<ToDo>>>(json);
-        }else
+            //ltToDo = JsonConvert.DeserializeObject<Dictionary<DateTime, List<ToDo>>>(json);
+        }
+        else
         {
             Debug.LogError("ToDo lst Json is null!");
         }
@@ -66,7 +69,7 @@ public class UserData
 
     public void ToDoSave()
     {
-        string json = JsonConvert.SerializeObject(dicToDo);
+        string json = JsonConvert.SerializeObject(ltToDo);
         DefineClass.WriteStringToFile(json, SaveType.ToDo);
     }
 
@@ -78,14 +81,15 @@ public class UserData
 
     public void AddToDo(ToDo toDoData)
     {
-        if (dicToDo.ContainsKey(toDoData.date) == false)
-            dicToDo.Add(toDoData.date, new List<ToDo>());
-
-        dicToDo[toDoData.date].Add(toDoData);
+        ltToDo.Add(toDoData);
     }
 
+    public List<ToDo> GetToDo(DateTime date)
+    {
+        return ltToDo.Where(todo => todo.isToDoOfDay(date)).ToList();
+    }
 
-    public Dictionary<DateTime, List<ToDo>> dicToDo = new Dictionary<DateTime, List<ToDo>>();
+    public List<ToDo> ltToDo = new List<ToDo>();
     public Dictionary<DateTime, string> dicMemo = new Dictionary<DateTime, string>();
 
     #region Memo

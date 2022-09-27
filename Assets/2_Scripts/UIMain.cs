@@ -22,6 +22,11 @@ public class UIMain : MonoBehaviour
     public Transform tfToDoList;
 
     public DateTime selectDate { get; set; }
+
+    public GameObject toDoItemPrefab;
+
+    private List<ToDo> selDayToDos;
+    private List<ToDoListItem> selDayToDoItems = new List<ToDoListItem>();
     
     private void Awake()
     {
@@ -40,6 +45,20 @@ public class UIMain : MonoBehaviour
     public void Refresh()
     {
         txtDate.text = string.Format("{0}/{1} {2}", selectDate.Month, selectDate.Day, selectDate.DayOfWeek);
+
+        selDayToDos = UserData.Instance.GetToDo(selectDate);
+
+        foreach (var item in selDayToDoItems)
+            item.gameObject.SetActive(false);
+
+        for(int i = 0; i < selDayToDos.Count; i++)
+        {
+            if (selDayToDoItems.Count <= i)
+                selDayToDoItems.Add(Instantiate(toDoItemPrefab, tfToDoList).GetComponent<ToDoListItem>());
+
+            selDayToDoItems[i].gameObject.SetActive(true);
+            selDayToDoItems[i].InitsetToDoInfo(selDayToDos[i]);
+        }
     }
 
     void OnClickList(CustomButton btn)

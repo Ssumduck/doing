@@ -1517,6 +1517,8 @@ MonoBehaviour:
   btnEdit: {fileID: 417591848}
   txtDate: {fileID: 6699660280627692060}
   tfToDoList: {fileID: 4217084412177720976}
+  toDoItemPrefab: {fileID: 492792117286725771, guid: 48a0e65c4d7f2404fa3538e766990579,
+    type: 3}
 --- !u!1 &8967408841117098169
 GameObject:
   m_ObjectHideFlags: 0

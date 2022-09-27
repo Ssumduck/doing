@@ -12,8 +12,15 @@ public class ToDoListItem : MonoBehaviour
     public GameObject imgComplete;
     public CustomButton btnMove;
 
-    bool isEditMode = false;
-    bool isCompleted = false;
+    private bool isEditMode = false;
+    private bool isCompleted = false;
+    private ToDo todoData;
+
+    private void Awake()
+    {
+        btnCheck.AddOnPointClick(OnClickCheck);
+        btnMove.AddOnPointClick(OnClickMove);
+    }
 
     public void SetEditMode(bool _isEditMode)
     {
@@ -41,22 +48,33 @@ public class ToDoListItem : MonoBehaviour
             txtToDo.color = Color.black;
 
             imgRemove.SetActive(false);
-            imgComplete.SetActive(true);
+            imgComplete.SetActive(todoData.isToDoDone(UIMain.Instance.selectDate));
 
             btnMove.gameObject.SetActive(false);
         }
+    }
+
+    public void InitsetToDoInfo(ToDo _todoData)
+    {
+        todoData = _todoData;
+
+        txtToDo.text = todoData.todo;
+        isCompleted = todoData.isToDoDone(UIMain.Instance.selectDate);
+        imgComplete.gameObject.SetActive(true);
+
+        SetEditMode(false);
     }
 
     void OnClickCheck(CustomButton btn)
     {
         if(isEditMode)
         {
-            
             Destroy(this.gameObject);
         }
         else
         {
             isCompleted = !isCompleted;
+            UIMain.Instance.Refresh();
         }
     }
 

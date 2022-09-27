@@ -104,6 +104,8 @@ public class UIEdit : MonoBehaviour
 
     void OnClickSave(CustomButton btn)
     {
+        newToDo.todo = inputTodo.text;
+
         UserData.Instance.AddToDo(newToDo);
         UIMain.Instance.Refresh();
         Main.Instance.OpenEditUI(false);
