@@ -71,5 +71,8 @@ public class UserData
     public Dictionary<DateTime, List<ToDo>> dicToDo = new Dictionary<DateTime, List<ToDo>>();
     public Dictionary<DateTime, string> dicMemo = new Dictionary<DateTime, string>();
 
+    #region Memo
     public static DateTime dateTime = new DateTime();
+    public static DateTime selectedTime = new DateTime();
+    #endregion
 }

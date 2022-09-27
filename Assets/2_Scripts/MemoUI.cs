@@ -14,6 +14,14 @@ public class MemoUI : MonoBehaviour
 
     public void Init()
     {
+        if(UserData.selectedTime.Ticks == UserData.dateTime.Ticks)
+        {
+            UserData.selectedTime = new System.DateTime();
+            TouchClose();
+            return;
+        }
+        UserData.selectedTime = new System.DateTime(UserData.dateTime.Ticks);
+
         dateTxt.text = $"{UserData.dateTime.Month}/{UserData.dateTime.Day} ({DefineClass.GetStringSimpleDay(UserData.dateTime.DayOfWeek)})";
         if (UserData.Instance.dicMemo.ContainsKey(UserData.dateTime))
         {
@@ -41,7 +49,7 @@ public class MemoUI : MonoBehaviour
         UserData.Instance.MemoSave();
     }
 
-    void TouchClose(CustomButton _btn)
+    void TouchClose(CustomButton _btn = null)
     {
         MemoSave();
         UserData.dateTime = new System.DateTime();
