@@ -20,9 +20,9 @@ public class CalendarUI : MonoBehaviour
     [SerializeField] DateTime time;
 
     float xStartPos = 60f;
-    float yStartPos = 400f;
+    float yStartPos = 380f;
     float xPadding = 125f;
-    float yPadding = 130f;
+    float yPadding = 105f;
 
     void Start()
     {

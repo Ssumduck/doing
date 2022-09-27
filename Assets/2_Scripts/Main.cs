@@ -21,6 +21,7 @@ public class Main : MonoBehaviour
 
     public void OpenEditUI(bool isOpen)
     {
+        uiEdit.InitSet();
         uiEdit.gameObject.SetActive(isOpen);
     }
 }

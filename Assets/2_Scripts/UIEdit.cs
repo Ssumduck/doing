@@ -36,21 +36,40 @@ public class UIEdit : MonoBehaviour
         btnSave.AddOnPointClick(OnClickSave);
         btnRepeat.AddOnPointClick(OnClickRepeat);
 
-        for(int i = 0; i < repeatTypeBtns.Length; i++)
-            repeatTypeBtns[i].AddOnPointClick(btn => SelectRepeatType((RepeatType)i+1));
+
+        for (int i = 0; i < weekdayBtns.Length; i++)
+        {
+            int idx = i;
+            weekdayBtns[i].AddOnPointClick(btn => SelectRepeatWeekdays((DayOfWeek)idx));
+        }
+
+        for (int i = 0; i < repeatTypeBtns.Length; i++)
+        {
+            int idx = i;
+            repeatTypeBtns[i].AddOnPointClick(btn => SelectRepeatType((RepeatType)(idx + 1)));
+        }
 
         InitSet();
     }
 
-    void InitSet()
+    public void InitSet()
     {
         newToDo = new ToDo();
         newToDo.date = UIMain.Instance.selectDate;
         txtDate.text = string.Format("{0}/{1}/{2}", newToDo.date.Year, newToDo.date.Month, newToDo.date.Day);
         inputTodo.text = "";
 
+        isRepeatSelected.SetActive(false);
         objRepeatOptions.SetActive(false);
         objWeekdays.SetActive(false);
+
+        repeatTypeBtns[0].transform.GetChild(1).gameObject.SetActive(true);
+
+        for (int i = 1; i < repeatTypeBtns.Length; i++)
+            repeatTypeBtns[i].transform.GetChild(1).gameObject.SetActive(false);
+
+        for (int i = 0; i < weekdayBtns.Length; i++)
+            weekdayBtns[i].transform.GetChild(0).gameObject.SetActive(false);
     }
 
     void OnClickRepeat(CustomButton btn)
@@ -58,6 +77,24 @@ public class UIEdit : MonoBehaviour
         isRepeat = !isRepeat;
         objRepeatOptions.SetActive(isRepeat);
         isRepeatSelected.SetActive(isRepeat);
+
+        if (isRepeat)
+        {
+            newToDo.repeatType = RepeatType.daily;
+            repeatTypeBtns[0].transform.GetChild(1).gameObject.SetActive(true);
+
+            for (int i = 1; i < repeatTypeBtns.Length; i++)
+                repeatTypeBtns[i].transform.GetChild(1).gameObject.SetActive(false);
+
+            for (int i = 0; i < weekdayBtns.Length; i++)
+                weekdayBtns[i].transform.GetChild(0).gameObject.SetActive(false);
+        }
+        else
+        {
+            objWeekdays.SetActive(false);
+            newToDo.repeatType = RepeatType.none;
+            newToDo.repeatDays.Clear();
+        }
     }
 
     void OnClickClose(CustomButton btn)
@@ -74,11 +111,23 @@ public class UIEdit : MonoBehaviour
 
     void SelectRepeatType(RepeatType type)
     {
-        for(int i = 0; i < repeatTypeBtns.Length; i++)
+        for (int i = 0; i < repeatTypeBtns.Length; i++)
         {
-            repeatTypeBtns[i].transform.GetChild(1).gameObject.SetActive(i + 1 == (int)type);
+            repeatTypeBtns[i].transform.GetChild(1).gameObject.SetActive((i + 1) == (int)type);
             newToDo.repeatType = type;
         }
+
+        objWeekdays.SetActive(type == RepeatType.custom);
+    }
+
+    void SelectRepeatWeekdays(DayOfWeek day)
+    {
+        if (newToDo.repeatDays.Contains(day))
+            newToDo.repeatDays.Remove(day);
+        else
+            newToDo.repeatDays.Add(day);
+
+        weekdayBtns[(int)day].transform.GetChild(0).gameObject.SetActive(newToDo.repeatDays.Contains(day));
     }
 }
 
