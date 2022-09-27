@@ -8,6 +8,7 @@ public enum SaveType
 {
     None = 0,
     Memo = 1, // 1. 메모
+    ToDo = 2, // 2. ToDo
 }
 
 public class DefineClass
@@ -72,6 +73,8 @@ public class DefineClass
         {
             case SaveType.Memo:
                 return "dicMemo";
+            case SaveType.ToDo:
+                return "ToDoLst";
         }
         return string.Empty;
     }

@@ -45,12 +45,29 @@ public class UserData
             Debug.LogError("dicMemo is null !!");
 #endif
         }
+
+        // ToDo 리스트 로드
+        if(DefineClass.ReadStringFromFile(SaveType.ToDo) != null)
+        {
+            string json = DefineClass.ReadStringFromFile(SaveType.ToDo);
+            Debug.Log($"Todo Lst Load : {json}");
+            dicToDo = JsonConvert.DeserializeObject<Dictionary<DateTime, List<ToDo>>>(json);
+        }else
+        {
+            Debug.LogError("ToDo lst Json is null!");
+        }
     }
 
     public void MemoSave()
     {
         string json = JsonConvert.SerializeObject(dicMemo);
         DefineClass.WriteStringToFile(json, SaveType.Memo);
+    }
+
+    public void ToDoSave()
+    {
+        string json = JsonConvert.SerializeObject(dicToDo);
+        DefineClass.WriteStringToFile(json, SaveType.ToDo);
     }
 
     //public void MemoSave()
