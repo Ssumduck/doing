@@ -33,6 +33,10 @@ public class MemoUI : MonoBehaviour
             }
             else
                 UserData.Instance.dicMemo.Add(UserData.dateTime, memoField.text);
+        }else
+        {
+            if (UserData.Instance.dicMemo.ContainsKey(UserData.dateTime))
+                UserData.Instance.dicMemo.Remove(UserData.dateTime);
         }
         UserData.Instance.MemoSave();
     }
