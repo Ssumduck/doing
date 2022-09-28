@@ -635,7 +635,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   soundIdx: 0
-  useTween: 1
+  useTween: 0
   tweenObject: {fileID: 3844636824947268092}
   tweenTime: 0.1
   tweenScaleUp: {x: 1, y: 1, z: 1}

@@ -62,6 +62,20 @@ public class UIMain : MonoBehaviour
         }
 
         btnEdit.gameObject.SetActive(selDayToDos.Count > 0);
+        btnToday.interactable = selectDate != DateTime.Today;
+    }
+
+    public void SetEditMode(bool _isEditMode)
+    {
+        isEditMode = _isEditMode;
+
+        btnEdit.transform.GetChild(1).gameObject.SetActive(isEditMode);
+
+        foreach (var item in selDayToDoItems)
+            item.SetEditMode(isEditMode);
+
+        if (!isEditMode)
+            Refresh();
     }
 
     void OnClickList(CustomButton btn)
@@ -92,11 +106,6 @@ public class UIMain : MonoBehaviour
     void OnClickEdit(CustomButton btn)
     {
         isEditMode = !isEditMode;
-
-        foreach (var item in selDayToDoItems)
-            item.SetEditMode(isEditMode);
-
-        if (!isEditMode)
-            Refresh();
+        SetEditMode(isEditMode);
     }
 }
