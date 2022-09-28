@@ -66,7 +66,7 @@ public class ToDoListItem : MonoBehaviour
         if(isEditMode)
         {
             UserData.Instance.DeleteToDo(todoData);
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
         }
         else
         {
