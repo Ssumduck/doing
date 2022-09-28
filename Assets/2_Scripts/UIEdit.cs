@@ -108,6 +108,7 @@ public class UIEdit : MonoBehaviour
 
         UserData.Instance.AddToDo(newToDo);
         UIMain.Instance.Refresh();
+        UserData.Instance.ToDoSave();
         Main.Instance.OpenEditUI(false);
     }
 

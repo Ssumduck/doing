@@ -25,6 +25,7 @@ public class UIMain : MonoBehaviour
 
     public GameObject toDoItemPrefab;
 
+    private bool isEditMode = false;
     private List<ToDo> selDayToDos;
     private List<ToDoListItem> selDayToDoItems = new List<ToDoListItem>();
     
@@ -59,6 +60,8 @@ public class UIMain : MonoBehaviour
             selDayToDoItems[i].gameObject.SetActive(true);
             selDayToDoItems[i].InitsetToDoInfo(selDayToDos[i]);
         }
+
+        btnEdit.gameObject.SetActive(selDayToDos.Count > 0);
     }
 
     void OnClickList(CustomButton btn)
@@ -88,5 +91,12 @@ public class UIMain : MonoBehaviour
 
     void OnClickEdit(CustomButton btn)
     {
+        isEditMode = !isEditMode;
+
+        foreach (var item in selDayToDoItems)
+            item.SetEditMode(isEditMode);
+
+        if (!isEditMode)
+            Refresh();
     }
 }

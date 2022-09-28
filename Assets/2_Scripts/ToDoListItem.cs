@@ -29,9 +29,7 @@ public class ToDoListItem : MonoBehaviour
         if(_isEditMode)
         {
             inputToDo.interactable = true;
-
-            btnCheck.gameObject.SetActive(false);
-
+            
             txtToDo.color = Color.gray;
 
             imgRemove.SetActive(true);
@@ -42,8 +40,6 @@ public class ToDoListItem : MonoBehaviour
         else
         {
             inputToDo.interactable = false;
-
-            btnCheck.gameObject.SetActive(true);
 
             txtToDo.color = Color.black;
 
@@ -58,7 +54,7 @@ public class ToDoListItem : MonoBehaviour
     {
         todoData = _todoData;
 
-        txtToDo.text = todoData.todo;
+        inputToDo.text = todoData.todo;
         isCompleted = todoData.isToDoDone(UIMain.Instance.selectDate);
         imgComplete.gameObject.SetActive(true);
 
@@ -69,11 +65,13 @@ public class ToDoListItem : MonoBehaviour
     {
         if(isEditMode)
         {
+            UserData.Instance.DeleteToDo(todoData);
             Destroy(this.gameObject);
         }
         else
         {
             isCompleted = !isCompleted;
+            todoData.CheckComplete(isCompleted, UIMain.Instance.selectDate);
             UIMain.Instance.Refresh();
         }
     }

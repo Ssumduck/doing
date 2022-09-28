@@ -53,7 +53,7 @@ public class UserData
         {
             string json = DefineClass.ReadStringFromFile(SaveType.ToDo);
             Debug.Log($"Todo Lst Load : {json}");
-            //ltToDo = JsonConvert.DeserializeObject<Dictionary<DateTime, List<ToDo>>>(json);
+            ltToDo = JsonConvert.DeserializeObject<List<ToDo>>(json);
         }
         else
         {
@@ -82,6 +82,12 @@ public class UserData
     public void AddToDo(ToDo toDoData)
     {
         ltToDo.Add(toDoData);
+    }
+
+    public void DeleteToDo(ToDo toDoData)
+    {
+        if (ltToDo.Contains(toDoData))
+            ltToDo.Remove(toDoData);
     }
 
     public List<ToDo> GetToDo(DateTime date)
