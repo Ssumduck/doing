@@ -4,20 +4,37 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class DayChange : MonoBehaviour, IPointerDownHandler
+public class DayChange : MonoBehaviour
 {
-    public Button button;
+    public CustomButton button;
+
+    private bool isMouseDown = false;
+    private Vector2 startPos;
 
     void Awake()
     {
-        
+        button.AddOnPointDownUp(OnPointerDown, OnPointerUp);
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    void Update()
     {
-        if (eventData.scrollDelta.x > 1)
-            UIMain.Instance.ChangeDate(true);
-        else if (eventData.scrollDelta.x < -1)
-            UIMain.Instance.ChangeDate(false);
+        if(isMouseDown)
+        {
+            if (Input.mousePosition.x - startPos.x > 1)
+                UIMain.Instance.ChangeDate(true);
+            else if (Input.mousePosition.x - startPos.x < -1)
+                UIMain.Instance.ChangeDate(false);
+        }
+    }
+
+    public void OnPointerDown(CustomButton btn)
+    {
+        isMouseDown = true;
+        startPos = Input.mousePosition;
+    }
+
+    public void OnPointerUp(CustomButton btn)
+    {
+        isMouseDown = false;
     }
 }

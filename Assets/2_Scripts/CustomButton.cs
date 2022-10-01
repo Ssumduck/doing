@@ -84,7 +84,7 @@ public class CustomButton : Button
         //Debug.LogError("CustomBtn Down");
         if (Input.touchCount >= 2) return;      //???? ???? ???? ???? ??????
 
-        base.OnPointerClick(eventData);
+        base.OnPointerDown(eventData);
 
         EventTriggerAction(EventTriggerType.PointerDown);
 
@@ -96,7 +96,7 @@ public class CustomButton : Button
         //Debug.LogError("CustomBtn Up");
         if (Input.touchCount >= 2) return;      //???? ???? ???? ???? ??????
 
-        base.OnPointerClick(eventData);
+        base.OnPointerUp(eventData);
         EventTriggerAction(EventTriggerType.PointerUp);
 
         if (useTween) iTween.ScaleTo(tweenObject, tweenScaleUp, tweenTime);
