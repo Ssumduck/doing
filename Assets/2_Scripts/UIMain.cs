@@ -21,6 +21,8 @@ public class UIMain : MonoBehaviour
     public Text txtDate;
     public Transform tfToDoList;
 
+    public Transform contentTr;
+
     public DateTime selectDate { get; set; }
 
     public GameObject toDoItemPrefab;

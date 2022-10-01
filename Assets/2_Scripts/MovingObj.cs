@@ -48,7 +48,7 @@ public class MovingObj : MonoBehaviour, IPointerDownHandler, IDragHandler, IEndD
         if(!bTr)
         {
             sortIdx = moveObj.transform.GetSiblingIndex();
-            moveObj.transform.SetParent(Main.Instance.uiMain.contentTr);
+    
             bTr = true;
         }
         moveObj.transform.position = eventData.position;
