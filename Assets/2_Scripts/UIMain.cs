@@ -80,6 +80,14 @@ public class UIMain : MonoBehaviour
             Refresh();
     }
 
+    public void ChangeDate(bool isNext)
+    {
+        if (isNext)
+            selectDate.AddDays(isNext ? 1 : -1);
+
+        Refresh();
+    }
+
     void OnClickList(CustomButton btn)
     {
         Main.Instance.OpenListUI(true);
