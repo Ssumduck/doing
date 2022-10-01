@@ -99,6 +99,7 @@ public class UIEdit : MonoBehaviour
 
     void OnClickClose(CustomButton btn)
     {
+        UIMain.Instance.SetEditMode(false);
         Main.Instance.OpenEditUI(false);
     }
 
@@ -106,9 +107,15 @@ public class UIEdit : MonoBehaviour
     {
         newToDo.todo = inputTodo.text;
 
-        UserData.Instance.AddToDo(newToDo);
-        UIMain.Instance.Refresh();
-        UserData.Instance.ToDoSave();
+        if (inputTodo.text != string.Empty)
+        {
+            UserData.Instance.AddToDo(newToDo);
+            UIMain.Instance.Refresh();
+            UserData.Instance.ToDoSave();
+        }
+        else
+            UserData.Instance.DeleteToDo(newToDo);
+
         Main.Instance.OpenEditUI(false);
     }
 

@@ -67,6 +67,7 @@ public class ToDoListItem : MonoBehaviour
         {
             UserData.Instance.DeleteToDo(todoData);
             gameObject.SetActive(false);
+            UserData.Instance.ToDoSave();
         }
         else
         {
