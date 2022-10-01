@@ -82,8 +82,7 @@ public class UIMain : MonoBehaviour
 
     public void ChangeDate(bool isNext)
     {
-        if (isNext)
-            selectDate.AddDays(isNext ? 1 : -1);
+        selectDate = selectDate.AddDays(isNext ? 1 : -1);
 
         Refresh();
     }

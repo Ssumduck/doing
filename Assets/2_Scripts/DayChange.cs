@@ -21,9 +21,15 @@ public class DayChange : MonoBehaviour
         if(isMouseDown)
         {
             if (Input.mousePosition.x - startPos.x > 1)
+            {
                 UIMain.Instance.ChangeDate(true);
+                isMouseDown = false;
+            }
             else if (Input.mousePosition.x - startPos.x < -1)
+            {
                 UIMain.Instance.ChangeDate(false);
+                isMouseDown = false;
+            }
         }
     }
 

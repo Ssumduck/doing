@@ -1754,7 +1754,7 @@ MonoBehaviour:
   btnEdit: {fileID: 417591848}
   txtDate: {fileID: 6699660280627692060}
   tfToDoList: {fileID: 4217084412177720976}
-  contentTr: {fileID: 0}
+  contentTr: {fileID: 6966553503077826970}
   toDoItemPrefab: {fileID: 492792117286725771, guid: 48a0e65c4d7f2404fa3538e766990579,
     type: 3}
 --- !u!1 &8391377368017484736
